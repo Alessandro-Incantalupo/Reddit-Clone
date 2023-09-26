@@ -1,0 +1,32 @@
+<!--fluid is set to make the container have no maximum width and thus occupy the all page-->
+<div class="ui fluid container segment">
+
+  <form class="ui large form segment inverted">
+    <h3 class="ui header">Add a Link</h3>
+
+    <div class="field">
+      <label for="title">Title:</label>
+      <input name="title" id="title" #newtitle placeholder="Ginutria la nutria">
+    </div>
+
+    <div class="field">
+      <label for="link">Link:</label>
+      <input name="link" id="link" #newlink placeholder="https://ginutria.com">
+    </div>
+
+  </form>
+
+  <button class="ui positive right floated button" (click)="addArticle(newtitle,newlink)">Submit</button>
+
+  <article class="ui grid posts">
+    <app-article *ngFor="let article of sortedArticles()"
+                 [articleCh]="article">
+    </app-article>
+  </article>
+
+
+</div>
+
+
+
+

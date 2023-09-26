@@ -1,0 +1,39 @@
+ul.ui.list li:before {
+  content: none;
+}
+
+.ui.statistic > .value {
+  color: green;
+}
+
+.twelve.wide.column.functions_container > .meta {
+  font-size: 20px;
+}
+
+.page__container {
+  background: white;
+  border-radius: 10px;
+
+  display: flex;
+}
+
+.points_container {
+  background: rgb(40 40 40);
+  width: 200px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.functions_container {
+  width: 500px;
+  padding: 10px 0;
+
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+

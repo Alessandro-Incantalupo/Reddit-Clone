@@ -1,0 +1,33 @@
+<div class="page__container">
+
+  <div class="four wide column center aligned votes points_container">
+    <div class="ui statistic">
+      <div class="value">
+        {{articleCh?.votes}}
+      </div>
+      <div class="label points__item">
+        Points
+      </div>
+    </div>
+  </div>
+
+  <div class="twelve wide column functions_container">
+    <a href="{{articleCh?.link}}" class="ui large header" target="_blank">{{articleCh?.title}}</a>
+    <div class="meta">({{ articleCh?.domain() }})</div>
+    <ul class="ui big horizontal list voters">
+      <li class="item">
+        <a href (click)="voteUp()">
+          <i class="arrow up icon"></i>
+          upvote
+        </a>
+      </li>
+      <li class="item">
+        <a href (click)="voteDown()">
+          <i class="arrow down icon"></i>
+          downvote
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
