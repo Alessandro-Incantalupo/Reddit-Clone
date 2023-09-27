@@ -28,6 +28,7 @@ export class FrontPageComponent {
     title.value = "";
     link.value = "";
 
+    // we add return false to prevent the page from reloading (which is the default behavior when you submit a form).
     return false;
   }
 

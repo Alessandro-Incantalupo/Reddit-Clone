@@ -9,6 +9,7 @@ import {ArticleModel} from "./article.model";
 export class ArticleComponent {
   @HostBinding("class.row") cssClass = "row";
   @Input() articleCh: ArticleModel | undefined;
+  // this input decorator ensures that the article property is populated by the article object passed in from the front-page component.
 
   // votes: number | undefined;
   // @Input() link: string | undefined;
@@ -30,10 +31,12 @@ export class ArticleComponent {
   // }
 
 
-  constructor() {
-    this.articleCh = new ArticleModel("Angular 2", "http://angular.io", 10);
-  }
+  // constructor() {
+  //   this.articleCh = new ArticleModel("Angular 2", "http://angular.io", 10);
+  // }
 
+
+  // we add this function here as well beacaue we want to be able to call it from the template.
   voteUp(): boolean {
     if (this.articleCh) {
       this.articleCh.voteUp();
